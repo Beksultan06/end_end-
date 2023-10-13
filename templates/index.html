@@ -1,0 +1,32 @@
+{% extends 'homepage.html' %}
+{% block content %}
+    <style>
+        /* Your CSS styles go here */
+        .content {
+            /* Define CSS styles for the .content class */
+        }
+        /* Add more CSS styles as needed */
+    </style>
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12">
+                            <h3 class="thin-heading mb-4">Конвертер MP3 из YouTube</h3>
+                            <form class="mb-5" method="post" id="contactForm" name="contactForm">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <div class="row">
+                                    <div class="col-12">
+                                        <input type="submit" value="Старт" class="btn btn-primary rounded-0 py-2 px-4"><span class="submitting"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
